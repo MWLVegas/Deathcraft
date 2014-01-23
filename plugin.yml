@@ -1,0 +1,64 @@
+name: deathcraft
+main: com.ivalicemud.deathcraft.Deathcraft
+version: 1.9.3
+
+commands:
+   deathcraft:
+      aliases: [dc2, d2, dc]
+      description: The main command for DeathCraft
+      usage: Use /dc list for a command guide
+   suicide:
+      aliases: [wrist, wrists, emo]
+      description: Allows a player to kill themselves
+      usage: /suicide
+      permission: deathcraft.suicide
+      permission-message: You do not have the strength to take your own life.
+   kill:
+      description: Allows an admin to kill another player
+      usage: /kill (player)
+      permission: deathcraft.kill
+      permission-message: You do not have 'deathcraft.kill'.
+
+      
+permissions:
+   deathcraft.*:
+      description: Gives access to all permission nodes in Deathcraft
+      default: false
+   deathcraft.suicide:
+      description: Allows a player to /suicide
+      default: true
+   deathcraft.kill:
+      description: Allows a player to /kill
+      default: op
+   deathcraft.chest.large:
+      description: Creates large death chests
+      default: false
+   deathcraft.chest.large.free:
+      description: Creates large death chests for free
+      default: false
+   deathcraft.chest.small:
+      description: Creates small death chests
+      default: false
+   deathcraft.chest.small.free:
+      description: Creates small death chests for free
+      default: false
+   deathcraft.admin:
+      description: Admin perm
+      default: op
+   deathcraft.ignore.pve:
+      description: Ignore all PVE messages
+      default: false
+   deathcraft.ignore.pvp:
+      description: Ignore all PVP messages
+      default: false
+   deathcraft.heads.pvp:
+      description: Allow player to receive pvp heads on kills
+      default: false
+   deathcraft.heads.pve:
+      description: Allow players to receive PVE heads on kills
+      default: false
+   deathcraft.heads.give:
+      description: Allow players to give heads of players without kills
+      default: false
+      
+            
